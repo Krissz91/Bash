@@ -1,8 +1,12 @@
 #!/bin/bash
+clear
 
-OUTPUT_FILE="full_log_output.txt"
+# Dátum és gépnév kinyerése
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+HOSTNAME=$(hostname)
+OUTPUT_FILE="logs_${HOSTNAME}_${TIMESTAMP}.txt"
 
-echo "Linux rendszerlogok mentése..." > "$OUTPUT_FILE"
+echo "Linux rendszerlogok mentése: $OUTPUT_FILE" > "$OUTPUT_FILE"
 
 # auth.log
 if [[ -f "/var/log/auth.log" ]]; then
