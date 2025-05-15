@@ -43,6 +43,6 @@ tar -czf $backup_file -C $parent_dir $item_name 2>/dev/null
 if [ $? -eq 0 ];then
     echo "Save successful! Path: $backup_file"
 else
-   echo "An error occurred during the save."
+    echo "An error occurred during the save."
 fi
 exit 0
