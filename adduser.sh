@@ -10,6 +10,7 @@ egrep "^$user:" /etc/passwd >/dev/null
 
 if [ $? -eq 0 ];then
   echo "The user is already in the system."
+exit 1
 else
   read -p "Password: " password
   useradd -m $user
